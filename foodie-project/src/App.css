@@ -1,0 +1,128 @@
+/* styles.css */
+
+/* Root container for the app */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #000; /* Set the background color to black */
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Reduce motion preference for spinning logo */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+/* Card styles */
+.card {
+  padding: 2em;
+}
+
+/* Read the docs styles */
+.read-the-docs {
+  color: #888;
+}
+
+/* General link styling */
+nav a {
+  position: relative;                   /* Required for the ::after pseudo-element */
+  text-decoration: none;
+  color: #ffffff;                       /* White text */
+  font-family: 'Open Sans', sans-serif;
+  padding: 12px 20px;                   /* Padding for a larger clickable area */
+  display: inline-block;
+  border-radius: 5px;                   /* Rounded corners */
+  transition: color 0.3s ease;
+  font-weight: 600;                     /* Slightly bold text */
+}
+
+/* Add underline effect */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;                          /* Height of the underline */
+  display: block;
+  margin-top: 5px;                      /* Space between text and underline */
+  right: 0;
+  background: #ffffff;                  /* Color of the underline */
+  transition: width 0.3s ease;
+}
+
+/* Hover effect for the links */
+nav a:hover::after {
+  width: 100%;                          /* Full-width underline on hover */
+  left: 0;
+  background-color: yellow; /* Transparent white background */
+}
+
+nav a:hover {
+  color: #000000;                       /* Black text on hover */
+}
+
+/* Active link styling */
+nav a:active {
+  color: #000000;
+}
+
+/* Spacing between links */
+nav a + a {
+  margin-left: 20px;
+}
+
+/* Specific colors for different sections */
+nav a[href='/home'] {
+  color: red; /* Red for Home link */
+}
+
+nav a[href='/food'] {
+  color: #e60606; /* Specific color for Food link */
+}
+
+nav a[href='/drinks'] {
+  color: red; /* Red for Drinks link */
+}
+
+nav a[href='/cart'] {
+  color: red; /* Red for Cart link */
+}
+
+nav a[href='/purchasehistory'] {
+  color: red; /* Red for Purchase History link */
+}
+
+nav a[href='/aboutus'] {
+  color: red; /* Red for About Us link */
+}
+
+nav a[href='/contactus'] {
+  color: red; /* Red for Contact Us link */
+}
